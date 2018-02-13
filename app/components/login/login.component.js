@@ -1,27 +1,13 @@
-import React from 'react';
-import {
-    View,
-    Button
-} from 'react-native';
-import styles from './styles';
+import React from "react";
+import { View, Text } from "react-native";
+import styles from "./styles";
 
-type Props = {
-    email: string,
-    password: string
-}
-
-const LoginComponent = (props: Props) => {
-    const {
-        
-    } = props;
-
-    return (
-        <View style={styles.container}>
-            <Button
-                title='Load Data'
-            />
-        </View>
-    );
+const LoginComponent = props => {
+  return (
+    <View style={styles.container}>
+      <Text>Cooking Book</Text>
+    </View>
+  );
 };
 
 export default LoginComponent;
