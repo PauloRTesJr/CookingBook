@@ -5,6 +5,10 @@ export default StyleSheet.create({
         width: 300
     },
     input: {
-        height: 70
+        height: 70,
+        marginBottom: 5
+    },
+    submit: {
+        marginTop: 10
     }
 });

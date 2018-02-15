@@ -1,7 +1,11 @@
 import React from "react";
 import firebase from "firebase";
+import {Provider} from 'react-redux';
 
 import RootStack from "./app/routes";
+import configureStore from './app/store/configureStore';
+
+const store = configureStore({});
 
 export default class App extends React.Component {
     constructor(props) {
@@ -19,6 +23,6 @@ export default class App extends React.Component {
     }
 
     render() {
-        return <RootStack/>;
+        return (<Provider store={store}><RootStack/></Provider>);
     }
 }

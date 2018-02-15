@@ -1,11 +1,21 @@
 import React from "react";
-import {View, Button} from "react-native";
+import {View, Button, Text} from "react-native";
 import {Fumi} from "react-native-textinput-effects";
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 import styles from "./styles";
 
-const LoginComponent = () => {
+type Props = {
+    email: string,
+    password: string
+}
+
+const LoginComponent = (props: Props) => {
+    const {
+        email,
+        password
+    } = props;
+
     return (
         <View style={styles.container}>
             <Fumi
@@ -16,6 +26,7 @@ const LoginComponent = () => {
                 iconColor={'#DB4264'}
                 iconSize={20}
                 keyboardType="email-address"
+                value={email}
             />
             <Fumi
                 style={styles.input}
@@ -25,6 +36,7 @@ const LoginComponent = () => {
                 iconColor={'#DB4264'}
                 iconSize={20}
                 secureTextEntry
+                value={password}
             />
             <Button
                 title="Login"
