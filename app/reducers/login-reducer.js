@@ -1,19 +1,19 @@
+import {actions} from "../constants";
+
 const initialState = {
-    email: "teste@teste.com",
-    password: "12345"
+    email: "asd",
+    password: "asd"
 };
 
 export const getLogin = (state: Object) => ({ ...state.login });
 
 const loginReducer = (state: Object = initialState, action: Object) => {
     switch (action.type) {
-        // case FETCH_DATA_SUCCESS: {
-        //     return {
-        //         isLoading: false,
-        //         error: false,
-        //         weatherInfo: action.payload.weatherInfo,
-        //     };
-        // }
+        case actions.login.submit: {
+            return {
+                isLoading: true
+            };
+        }
         default: {
             return state;
         }
