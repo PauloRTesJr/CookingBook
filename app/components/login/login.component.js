@@ -1,5 +1,5 @@
 import React from "react";
-import {View, Button, Text} from "react-native";
+import {View, TouchableOpacity, Text} from "react-native";
 import {Fumi} from "react-native-textinput-effects";
 import Icon from 'react-native-vector-icons/FontAwesome';
 
@@ -38,11 +38,20 @@ const LoginComponent = (props: Props) => {
                 secureTextEntry
                 value={password}
             />
-            <Button
-                title="Login"
-                color="#DB4264"
-                onPress={() => {}}
-            />
+            <TouchableOpacity
+                style={[styles.buttonActions, styles.buttonLogin]}
+                activeOpacity={0.6}
+                onPress={() => {}}>
+                <Icon name="coffee" size={25} color="#FFFFFF" />
+                <Text style={styles.buttonText}>Login</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+                style={[styles.buttonActions, styles.buttonFacebook]}
+                activeOpacity={0.6}
+                onPress={() => {}}>
+                <Icon name="facebook" size={25} color="#FFFFFF" />
+                <Text style={styles.buttonText}>Login with Facebook</Text>
+            </TouchableOpacity>
         </View>
     );
 };

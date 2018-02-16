@@ -17,7 +17,9 @@ class LoginContainer extends Component {
 	render() {
 		return (
 			<View style={styles.container}>
-				<Text style={styles.logoText}>Cooking Book</Text>
+				<View style={styles.logo}>
+					<Text style={styles.logoText}>Cooking Book</Text>
+				</View>
 				<LoginComponent
                     email={this.props.email}
                     password={this.props.password}/>
@@ -34,14 +36,23 @@ export default connect(
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		justifyContent: "center",
 		backgroundColor: "#554468",
 		alignItems: "center"
+	},
+	logo: {
+        backgroundColor: "#FFFFFF",
+		alignItems: "center",
+		justifyContent: "center",
+		padding: 20,
+		marginTop: 80,
+		marginBottom: 80,
+        borderColor: "#DB4264",
+        borderWidth: 3
 	},
 	logoText: {
 		textAlign: "center",
 		fontSize: 40,
-		marginBottom: 50,
-		color: "#DB4264"
+		color: "#DB4264",
+        fontWeight: "800"
 	}
 });
