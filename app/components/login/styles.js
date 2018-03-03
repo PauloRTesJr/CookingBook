@@ -3,28 +3,35 @@ import {StyleSheet} from "react-native";
 import {colors} from "../../constants";
 
 export default StyleSheet.create({
-    container: {
-        width: 300
+    screen: {
+        flex: 1,
+        alignSelf: "stretch",
+        justifyContent: "center",
+        alignItems: "center"
     },
     logo: {
-        backgroundColor: "#FFFFFF",
+        backgroundColor: "rgba(255,255,255,0.4)",
         alignItems: "center",
         justifyContent: "center",
         padding: 20,
-        marginTop: 80,
-        marginBottom: 80,
-        borderColor: colors.secondary,
-        borderWidth: 3
+        marginTop: 70,
+        marginBottom: 30,
+        borderColor: colors.primary,
+        borderWidth: 3,
+        borderRadius: 10
     },
     logoText: {
         textAlign: "center",
         fontSize: 40,
-        color: colors.secondary,
+        color: colors.primary,
         fontWeight: "800"
     },
+    loginContainer: {
+        width: 300
+    },
     input: {
-        height: 70,
-        marginBottom: 5
+        height: 60,
+        marginBottom: 10
     },
     buttonActions: {
         flexDirection: "row",
@@ -42,9 +49,21 @@ export default StyleSheet.create({
         marginLeft: 10
     },
     buttonLogin: {
-        backgroundColor: colors.secondary
+        backgroundColor: colors.secondaryTransparency
     },
     buttonFacebook: {
         backgroundColor: colors.facebook
+    },
+    createAccount: {
+        alignSelf: "stretch",
+        backgroundColor: "rgba(255,255,255,0.3)",
+        height: 80,
+        justifyContent: "center",
+        alignItems: "center",
+        borderColor: colors.primary,
+        borderTopWidth: 3
+    },
+    createAccountText: {
+        fontWeight: "800"
     }
 });

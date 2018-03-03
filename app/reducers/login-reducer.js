@@ -1,8 +1,8 @@
 import {actions} from "../constants";
 
 const initialState = {
-    email: "asd",
-    password: "asd"
+    isSubmitting: false,
+    isLoggedIn: false
 };
 
 export const getLogin = (state: Object) => ({ ...state.login });
@@ -10,8 +10,9 @@ export const getLogin = (state: Object) => ({ ...state.login });
 const loginReducer = (state: Object = initialState, action: Object) => {
     switch (action.type) {
         case actions.login.submit: {
+            console.log("reducer submit");
             return {
-                isLoading: true
+                ...state, isSubmitting: true
             };
         }
         default: {
