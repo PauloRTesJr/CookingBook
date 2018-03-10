@@ -19,13 +19,13 @@
     "preset": "react-native"
   },
   "dependencies": {
-    "firebase": "^4.10.0",
+    "firebase": "^4.10.1",
     "react": "16.2.0",
-    "react-native": "0.52.0",
-    "react-native-keyboard-aware-scroll-view": "^0.4.3",
+    "react-native": "^0.54.0",
+    "react-native-keyboard-aware-scroll-view": "^0.4.4",
     "react-native-textinput-effects": "^0.4.2",
     "react-native-vector-icons": "^4.5.0",
-    "react-navigation": "^1.0.3",
+    "react-navigation": "^1.4.0",
     "react-redux": "^5.0.7",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0"
